@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROI</title>
+    <link rel="stylesheet" href="stylesheet.css"> 
+</head>
+<body>
+    <header class="main_header">
+        <nav>
+            <div class="links">
+                <a href="instructions.html">Instrucciones</a>
+                <a href="main_page.html">Inicio</a>
+                <a href="">Otros links</a>
+            </div>
+        </nav>
+    </header>
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 5px; "><p>PROI Average calculator</p></h1>
+        <span style="text-align:center; font-weight:700;">[Ya sabemos que quizás le cogiste manía a Pepa y a Leandro]</span> 
+    </div>
+    <div class="courses">
+        <h2>Evaluación Continua/no presencial</h2>
+        <div>
+            <p>Escoge un tipo de evaluación</p>
+            <select name="Tipo de evaluación" id="evaluacion">
+                <option value="Escoge uno">Escoge uno</option>
+                <option value="Presencial">Presencial</option>
+                <option value="No Presencial">No Presencial/Julio/Fin de carrera</option>
+            </select>
+            <p><b>Nota:</b> Si escoges No presencial pon la nota en <b>Pruebas de programación I</b></p>
+            <h4>Media de los cuestionarios de teoría(Sobre 10)</h4>
+            <input type="text" id="cuestionariosTeoria" name="Cuestionarios de teoria">
+            <h4>Media de los cuestionarios de prácticas (Sobre 10)</h4>
+            <input type="text" id="cuestionariosPractica" name="Cuestionarios de practicas">
+            <h4>Resolución de ejercicios en grupo (Sobre 10 los tres)</h4>
+            <input type="text" id="reg1" name="Resolucion de ejercicios de grupo I">
+            <input type="text" id="reg2" name="Resolucion de ejercicios de grupo II">
+            <input type="text" id="reg3" name="Resolucion de ejercicios de grupo III">
+            <h4>Pruebas de programación I (examen, sobre 10)</h4>
+            <input type="text" id="examenProgramacionI" name="Prueba de programacion I">
+            <h4>Pruebas de programación II (examen, sobre 10)</h4>
+            <input type="text" id="examenProgramacionII" name="Prueba de programacion II">
+        </div>
+        <button class="Calc" id="calc">
+            Calcular nota final
+        </button>
+    </div>
+    <div class="nota" id="notaFinal">
+        <label for="notaFinal">Nota resultante:</label>
+        <div id="notaFinal"></div>
+    </div>
+    <footer>
+        <p>Made by Akanenosketch [Insert funny text] </p>
+    </footer>
+    <script src="Clac_notas_PROI.js"></script>
+</body>
+</html>
