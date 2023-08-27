@@ -44,6 +44,8 @@ function CalcularNotaMedia(){
             nota.style.backgroundColor = "#99ff99";
           } else if (notaFinal.toFixed(2) < 9.00) {
             nota.style.backgroundColor = "#99ccff";
+          } else if (notaFinal.toFixed(2) >= 9.00) {
+            nota.style.backgroundColor = "#9999ff";
           } else {
             nota.style.backgroundColor = "#ffffcc";
           }
@@ -61,7 +63,7 @@ function CalcularNotaMedia(){
             nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
         }
         else{
-            if(isNaN(notaFinal)||(ct<0 || cp<0 || regs<0|| p1<0||p2<0)||(ct>10 || cp>10 || regs>10|| p1>10||p2>10)){
+            if(isNaN(notaFinal)||(ct<0 || cp<0 || p1<0)||(ct>10 || cp>10 || p1>10)){
                 notaFinal = NaN;
                 nota.innerText = "Revise los valores introducidos!!";
             }
@@ -76,6 +78,8 @@ function CalcularNotaMedia(){
             nota.style.backgroundColor = "#99ff99";
           } else if (notaFinal.toFixed(2) < 9.00) {
             nota.style.backgroundColor = "#99ccff";
+          } else if (notaFinal.toFixed(2) >= 9.00) {
+            nota.style.backgroundColor = "#9999ff";
           } else {
             nota.style.backgroundColor = "#ffffcc";
           }

@@ -1,41 +1,76 @@
 //We collect all the values needed
 const practicasLaboratorio = document.getElementById("practicasLaboratorio");
-const parcial1 = document.getElementById("parcial1");
-const parcial2 = document.getElementById("parcial2");
-const tipoDeEvaluacion document.getElementById("evaluacion");
+const parcial1 = document.getElementById("primerParcial");
+const parcial2 = document.getElementById("segundoParcial");
+const tipoDeEvaluacion =  document.getElementById("evaluacion");
 const nota = document.getElementById("notaFinal");
+
 function calcularFinal(){
-  if(tipoDeEvaluacion==="Presencial"){
-    let pl = parseFloat(practicasLaboratorio.value);
+  if(tipoDeEvaluacion.value ==="Presencial"){
+    let pLab = parseFloat(practicasLaboratorio.value);
     let p1 = parseFloat(parcial1.value);
     let p2 = parseFloat(parcial2.value);
-    let notaFinal pl+p1+p2; 
+    let notaFinal = pLab+p1+p2; 
     let notaHipotetica = 0;
-    if((pl<1||p1<2||p2<2)&&notaFinal>=5){
+
+    if((pLab<1||p1<2||p2<2) && notaFinal>=5){
       notaHipotetica = notaFinal;
       notaFinal = 4;
-      nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
-    else if(isNaN(notaFinal)||(ct<0 || cp<0 || regs<0|| p1<0||p2<0)||(ct>10 || cp>10 || regs>10|| p1>10||p2>10)){
-          notaFinal = NaN
+      nota.innerText = "Nota hipotética: " + notaHipotetica + "\n Nota real: " + notaFinal;
+    }
+      else if(isNaN(notaFinal)||(pLab<0 || p1<0 || p2<0)||(pLab>2|| p1>4||p2>4)){
+          notaFinal = NaN;
           nota.innerText = "Revise los valores introducidos!!";
       }
-    else nota.innerText = (Math.round( notaFinal * 10 ) / 10).toFixed(1) + " (Nota exacta: " + notaFinal + " )";    
-    }
-       // Comprobamos la nota
+    else {
+      nota.innerText = " Nota exacta: " + notaFinal + " ";  
+    }  
 
-    if (notaFinal.toFixed(2) < 5.00) {
-        nota.style.backgroundColor = "salmon";
-      } else if (notaFinal.toFixed(2) < 6.00) {
-        nota.style.backgroundColor = "coral";
-      } else if (notaFinal.toFixed(2) < 8.00) {
-        nota.style.backgroundColor = "#99ff99";
-      } else if (notaFinal.toFixed(2) < 9.00) {
-        nota.style.backgroundColor = "#99ccff";
-      } else {
-        nota.style.backgroundColor = "#ffffcc";
-      }    
+    if (notaFinal < 5.00) {
+      nota.style.backgroundColor = "salmon";
+    } else if (notaFinal < 6.00) {
+      nota.style.backgroundColor = "coral";
+    } else if (notaFinal < 8.00) {
+      nota.style.backgroundColor = "#99ff99";
+    } else if (notaFinal < 9.00) {
+      nota.style.backgroundColor = "#99ccff";
+    }else if (notaFinal >= 9.00) {
+      nota.style.backgroundColor = "#9999ff";
+    } else {
+      nota.style.backgroundColor = "#ffffcc";
+    }    
+  }
+  else if(tipoDeEvaluacion.value === "No Presencial"){
+    let p2 = parseFloat(parcial2.value);    
+    let notaFinal = p2;
+
+    if(isNaN(p2)||p2<0||p2>10){
+      p2 = NaN;
+      nota.innerText = "Revise los valores introducidos!!";
+    }else{
+      nota.innerText =  "Nota exacta: " + p2 + "";
     }
+
+    if (notaFinal < 5.00) {
+      nota.style.backgroundColor = "salmon";
+    } else if (notaFinal < 6.00) {
+      nota.style.backgroundColor = "coral";
+    } else if (notaFinal < 8.00) {
+      nota.style.backgroundColor = "#99ff99";
+    } else if (notaFinal < 9.00) {
+      nota.style.backgroundColor = "#99ccff";
+    }else if (notaFinal >= 9.00) {
+      nota.style.backgroundColor = "#9999ff";
+    } else {
+      nota.style.backgroundColor = "#ffffcc";
+    }      
+  }
+  else{
+    nota.innerText = "Escoge un tipo de evaluación!!";
+    nota.style.backgroundColor = "#ffffcc";
+  }
 }
+
 
   //Get button and add eventListener so it executes the function
   const button = document.getElementById("calc");
