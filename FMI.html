@@ -16,12 +16,42 @@
     </header>
     <div style="text-align: center;">
         <h1 style="margin-bottom: 5px; "><p>FMI Average calculator</p></h1>
-        <span style="text-align:center; font-weight:700;">[Modus Tollens >>>> Modus Ponens]</span> 
+        <span style="text-align:center; font-weight:700;">[Modus Tollens >>>>> Modus Ponens (ya no hay jugador de póker sadge...)]</span> 
     </div>
     <div class="courses">
-        <h2>Asignaturas de primero de GREI</h2>
-
+        <h2>Evaluación Continua/no presencial</h2>
+        <div>
+            <p>Escoge un tipo de evaluación</p>
+            <select name="Tipo de evaluación" id="evaluacion">
+                <option value="Escoge uno">Escoge uno</option>
+                <option value="Presencial">Presencial</option>
+                <option value="No Presencial">No Presencial/Julio/Fin de carrera</option>
+            </select>
+            <p><b>Nota:</b> Si escoges No presencial pon la nota del examen en <b>Primer Parcial</b></p>
+            <h4>Primer Parcial (Sobre 10)</h4>
+            <input type="text" id="primerParcial" name="Primer Parcial">
+            <h4>Segundo Parcial (Sobre 10)</h4>
+            <input type="text" id="segundoParcial" name="Segundo Parcial">
+            <h4>Entregas de prácticas (Sobre 10 los dos)</h4>
+            <input type="text" id="entrega1" name="Primera Entrega">
+            <input type="text" id="entrega2" name="Segunda Entrega">
+            <h4>Entrega de prácticas en Maxima (Sobre 10)</h4>
+            <input type="text" id="entregaMaxima" name="Entrega Maxima">
+            <h4>Trabajo final (Presentación, sobre 10)</h4>
+            <input type="text" id="trabajoFinal" name="Trabajo Final">
+        </div>
+        <button class="Calc" id="calc">
+            Calcular nota final
+        </button>
     </div>
-    
+    <div class="nota" id="notaFinal">
+        <label for="notaFinal">Nota resultante:</label>
+        <div id="notaFinal"></div>
+    </div>
+    <footer>
+        <p>Made by Akanenosketch [Insert funny text] </p>
+        <p style="font-size: small; font-weight:lighter">Si existe alguna duda o se cree que existe un error, revise la <a style="margin: auto" href="https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?ensenyament=O06G151V01&assignatura=O06G151V01101&fitxa_apartat=7&idioma=cast&idioma_assig=gal&idioma_assig=cast">Guía Docente</a> y abra un issue en GitHub/avise al desarrollador a cargo.</p>
+    </footer>
+    <script src="FMI_script.js"></script>
 </body>
 </html>
