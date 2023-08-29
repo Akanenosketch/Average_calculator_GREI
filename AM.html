@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AM</title>
+    <title>PROI</title>
     <link rel="stylesheet" href="stylesheet.css"> 
 </head>
 <body>
@@ -16,12 +18,61 @@
     </header>
     <div style="text-align: center;">
         <h1 style="margin-bottom: 5px; "><p>AM Average calculator</p></h1>
-        <span style="text-align:center; font-weight:700;">[Spoiler: viva los fractales]</span> 
+        <span style="text-align:center; font-weight:700;">[Spoiler: Viva los fractales]</span> 
     </div>
     <div class="courses">
-        <h2>Asignaturas de primero de GREI</h2>
-
+        <h2>Evaluación Continua/no presencial</h2>
+        <div>
+            <p>Escoge un tipo de evaluación</p>
+            <select name="Tipo de evaluación" id="evaluacion">
+                <option value="Escoge uno">Escoge uno</option>
+                <option value="Presencial">Presencial</option>
+                <option value="No Presencial">No Presencial/Julio/Fin de carrera</option>
+            </select>
+            <p><b>Nota:</b> Si escoges No presencial pon la nota del examen de Maxima en <b>Tercer Parcial</b></p>
+            <h4>Entregas (Sobre 10 las 6)</h4>
+            <div>
+                <input type="text" id="entrega1" name="Entrega 1">
+                <input type="text" id="entrega2" name="Entrega 2">
+                <input type="text" id="entrega3" name="Entrega 3">                
+            </div>
+            <div style="margin-top: 5px;">
+                <input type="text" id="entrega4" name="Entrega 4">
+                <input type="text" id="entrega5" name="Entrega 5">
+                <input type="text" id="entrega6" name="Entrega 6">                
+            </div>
+            <h4>Prácticas de Maxima (Sobre 10 los 4)</h4>
+            <div>
+                <input type="text" id="practica1" name="Practica 1">
+                <input type="text" id="practica2" name="Practica 2">            
+            </div>
+            <div style="margin-top: 5px;">
+                <input type="text" id="practica3" name="Practica 3">
+                <input type="text" id="practica4" name="Practica 4">            
+            </div>
+            <h4>Trabajo Final (Sobre 10)</h4>
+            <input type="text", id="trabajoFinal", name="Trabajo Final">
+            <h4>Primer Parcial (Sobre 10)</h4>
+            <input type="text" id="primerParcial" name="Resolucion de ejercicios de grupo I">
+            <h4>Segundo Parcial (Sobre 10)</h4>
+            <input type="text" id="segundoParcial" name="Prueba de programacion I">
+            <h4>Tercer Parcial (Sobre 10)</h4>
+            <input type="text" id="tercerParcial" name="Prueba de programacion II">
+            <h4>Examen Final (Sobre 10)</h4>
+            <input type="text" id="examenFinal" name="Examen Final">
+        </div>
+        <button class="calc" id="calc">
+            Calcular nota final
+        </button>
     </div>
-    
+    <div class="nota" id="notaFinal">
+        <label for="notaFinal">Nota resultante:</label>
+        <div id="notaFinal"></div>
+    </div>
+    <footer>
+        <p>Made by Akanenosketch [Insert funny text] </p>
+        <p style="font-size: small; font-weight:lighter">Si existe alguna duda o se cree que existe un error, revise la <a style="margin:auto" href="https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?ensenyament=O06G151V01&assignatura=O06G151V01102&fitxa_apartat=7&idioma=cast&idioma_assig=gal&idioma_assig=cast">Guía Docente</a> y abra un issue en GitHub/avise al desarrollador a cargo.</p>
+    </footer>
+    <script src="AM_script.js"></script>
 </body>
 </html>
