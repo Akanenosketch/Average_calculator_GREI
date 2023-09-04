@@ -85,8 +85,8 @@ function CalcularNotaMedia(){
           }
     }
     else{
-        nota.innerText = "Escoge un tipo de evaluación!!";
-        nota.style.backgroundColor = "#ffffcc"
+      nota.innerText = "Escoge un tipo de evaluación!!";
+      nota.style.backgroundColor = "#ffffcc";
     }
 
 }

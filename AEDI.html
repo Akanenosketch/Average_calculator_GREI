@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AEDI</title>
+    <link rel="stylesheet" href="stylesheet.css"> 
 </head>
 <body>
-    
+    <header class="main_header">
+        <nav>
+            <div class="links">
+                <a href="instructions.html">Instrucciones</a>
+                <a href="index.html">Inicio</a>
+                <a href="">Otros links</a>
+            </div>
+        </nav>
+    </header>
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 5px; "><p>AEDI Average calculator</p></h1>
+        <span style="text-align:center; font-weight:700;">[<em><b>Pilas</b></em> de furros, <em><b>colas</b></em> de furros, <em><b>listas</b></em> de furros a matar]</span> 
+    </div>
+    <div class="courses">
+        <h2>Evaluación Continua/no presencial</h2>
+        <div>
+            <p>Escoge un tipo de evaluación</p>
+            <select name="Tipo de evaluación" id="evaluacion">
+                <option value="Escoge uno">Escoge uno</option>
+                <option value="Presencial">Presencial</option>
+                <option value="No Presencial">No Presencial/Julio</option>
+                <option value="Fin de carrera">Fin de carrera</option>
+            </select>
+            <p><b>Notas:</b> Si escoges No presencial pon la nota del examen a papel en <b>Examen de Búsqueda y Ordenación</b></p>
+            <p>Si escoges Fin de carrera pon la nota del examen en <b>Examen de Búsqueda y Ordenación</b></p>
+            <p><b>Pendiente de corregir: la GD puede que tenga fallos</b></p>
+            <h4>Participación en prácticas de laboratorio (Sobre 10)</h4>
+            <input type="text" id="practicasLaboratorio" name="Practicas de Laboratorio">
+            <h4>Examen de Complejidad, Estructuras Enlazadas y TADs (Examen, sobre 10)</h4>
+            <input type="text" id="parcial1" name="Primer Parcial">
+            <h4>Examen de Búsqueda y Ordenación (Examen, sobre 10)</h4>
+            <input type="text" id="parcial2" name="Segundo Parcial">
+            <h4>Defensa grupal del proyecto (Sobre 10 los tres)</h4>
+            <input type="text" id="defensa1" name="Defensa Grupal 1">
+            <input type="text" id="defensa2" name="Defensa Grupal 2">
+            <input type="text" id="defensa3" name="Defensa Grupal 3">
+            <h4>Prueba individual del proyecto (Examen, sobre 10)</h4>
+            <input type="text" id="examenProyecto" name="Examen Proyecto">
+        </div>
+        <button class="calc" id="calc">
+            Calcular nota final
+        </button>
+    </div>
+    <div class="nota" id="notaFinal">
+        <label for="notaFinal">Nota resultante:</label>
+        <div id="notaFinal"></div>
+    </div>
+    <footer>
+        <p>Made by Akanenosketch [Insert funny text] </p>
+        <p style="font-size: small; font-weight:lighter">Si existe alguna duda o se cree que existe un error, revise la <a style="margin:auto" href="https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?ensenyament=O06G151V01&assignatura=O06G151V01107&fitxa_apartat=7&idioma=cast&idioma_assig=gal&idioma_assig=cast">Guía Docente</a> y abra un issue en GitHub/avise al desarrollador a cargo.</p>
+    </footer>
+    <script src="AEDI_script.js"></script>
 </body>
 </html>
