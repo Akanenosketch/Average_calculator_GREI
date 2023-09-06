@@ -25,9 +25,7 @@ function calcularFinal(){
         let notaFinal = (0.05*pL)+(p1*0.30)+(p2*0.2)+(((d1+d2+d3)/3)*0.20)+(eP*0.25);
         let notaHipotetica = 0;
 
-        if((((p1*0.3)+(p2*0.2))<5 || eP<5) && notaFinal>=5){
-            console.log(((p1*0.3)+(p2*0.2)));
-            console.log(eP);
+        if((((p1+p2)/2)<5 || eP<5) && notaFinal>=5){
             notaHipotetica = notaFinal;
             notaFinal = 4;
             nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
@@ -61,8 +59,14 @@ function calcularFinal(){
         let eP = parseFloat(proyecto.value);
 
         let notaFinal = (eT*0.55)+(dP*0.20)+(eP*0.25);
+        let notaHipotetica;
 
-        if(isNaN(notaFinal)||(eT<0 || dP<0 || eP<0 )||(eT>10 || dP>10 || eP>10)){
+        if((eT<5||eP<5)||notaFinal>=5){
+          notaHipotetica = notaFinal;
+          notaFinal = 4;
+          nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
+        }
+        else if(isNaN(notaFinal)||(eT<0 || dP<0 || eP<0 )||(eT>10 || dP>10 || eP>10)){
             notaFinal = NaN;
             nota.innerText = "Revise los valores introducidos!!";
         }
