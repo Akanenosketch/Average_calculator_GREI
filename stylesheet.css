@@ -39,7 +39,7 @@ a{
 }
 
 footer{
-    position:absolute;
+    position:relative;
     bottom:0;
     background-color:  rgb(154, 196, 196);
     padding-top: 15px;
@@ -104,6 +104,14 @@ a:hover{
     background-color:  rgb(154, 196, 196);
     border-color: transparent;
     box-shadow: 5px 5px 5px gray;
+}
+
+.discord{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 button:hover{
