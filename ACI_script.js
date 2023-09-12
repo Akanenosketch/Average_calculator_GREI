@@ -20,7 +20,7 @@ function calcularFinal(){
         let notaHipotetica;
         if((p1<3||p2<3||l1<3||l2<3)&& notaFinal>=5){
             notaHipotetica = notaFinal;
-            notaFinal = 4;  //En la GD esto discrepa entre 4.9 y 4
+            notaFinal = 4.9;  //4.9 en continua
             nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
         }else if(isNaN(notaFinal)||(p1<0||p2<0||l1<0||l2<0)||(p1>10||p2>10||l1>10||l2>10)){
             notaFinal = NaN;
@@ -52,7 +52,7 @@ function calcularFinal(){
         
         if ((eF<3||eP<3)&& notaFinal>=5){
             notaHipotetica = notaFinal;
-            notaFinal = 4;  //En la GD esto discrepa entre 4.9 y 4
+            notaFinal = 4;  //4 en global
             nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
         }else if((isNaN(notaFinal))||(eP<0||eF<0)||(eP>10||eF>10)){
             notaFinal = NaN;
