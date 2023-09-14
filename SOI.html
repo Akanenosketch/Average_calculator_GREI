@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOI</title>
+    <link rel="stylesheet" href="stylesheet.css"> 
+</head>
+<body>
+    <header class="main_header">
+        <nav>
+            <div class="links">
+                <a href="instructions.html">Instrucciones</a>
+                <a href="index.html">Inicio</a>
+                <a href="links.html">Otros links</a>
+            </div>
+        </nav>
+    </header>
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 5px; "><p>SOI Average calculator</p></h1>
+        <span style="text-align:center; font-weight:700;">[Me quiero morir]</span> 
+    </div>
+    <div class="courses">
+        <h2>Evaluación Continua/no presencial</h2>
+        <div>
+            <p>Escoge un tipo de evaluación</p>
+            <select name="Tipo de evaluación" id="evaluacion">
+                <option value="Escoge uno">Escoge uno</option>
+                <option value="Presencial">Presencial</option>
+                <option value="No Presencial">No Presencial/Julio/Fin de carrera</option>
+            </select>
+            <p><b>Nota:</b> Si escoges No presencial pon las notas en <b>Examen Teórico I y Examen Práctico Linux I</b></p>
+            <h4>Examen Teórico I(Examen, sobre 10)</h4>
+            <input type="text" id="parcial1" name="Primer Examen Teórico">
+            <h4>Examen Teórico II (Examen, sobre 10)</h4>
+            <input type="text" id="parcial2" name="Segundo Examen Teórico">
+            <h4>Examen Práctico Linux I (Examen, sobre 10)</h4>
+            <input type="text" id="parcial3" name="Primer Examen Práctico">
+            <h4>Examen Práctico Linux II (Examen, sobre 10)</h4>
+            <input type="text" id="parcial4" name="Segundo Examen Práctico">
+            <h4>Actividades Progresivas (Sobre 10)</h4>
+            <input type="text" id="actividades" name="Actividades Progresivas">
+        </div>
+        <button class="calc" id="calc">
+            Calcular nota final
+        </button>
+    </div>
+    <div class="nota" id="notaFinal">
+        <label for="notaFinal">Nota resultante:</label>
+        <div id="notaFinal"></div>
+    </div>
+    <footer>
+        <p>Made by Akanenosketch [Insert funny text] </p>
+        <p style="font-size: small; font-weight:lighter">Si existe alguna duda o se cree que existe un error, revise la <a style="margin:auto" href="https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?ensenyament=O06G151V01&assignatura=O06G151V01203&fitxa_apartat=7&idioma=cast&idioma_assig=gal&idioma_assig=cast">Guía Docente</a> y abra un issue en GitHub/avise al desarrollador a cargo.</p>
+    </footer>
+    <script src="SOI_script.js"></script>
+</body>
+</html>
