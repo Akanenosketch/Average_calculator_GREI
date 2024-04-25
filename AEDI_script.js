@@ -25,7 +25,7 @@ function calcularFinal(){
         let notaFinal = (0.05*pL)+(p1*0.30)+(p2*0.2)+(((d1+d2+d3)/3)*0.20)+(eP*0.25);
         let notaHipotetica = 0;
 
-        if((((p1+p2)/2)<5 || eP<5) && notaFinal>=5){
+        if((((p1*0.3)+(p2*0.2))<2.5 || eP<5) && notaFinal>=5){
             notaHipotetica = notaFinal;
             notaFinal = 4;
             nota.innerText = "Nota hipotética: " + (Math.round( notaHipotetica * 10 ) / 10).toFixed(1) + "(Nota exacta : " + notaHipotetica + ")\n Nota real: " + notaFinal;
