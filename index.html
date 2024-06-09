@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculador de Medias - GREI edition</title>
-    <link rel="stylesheet" href="stylesheet.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="main_header">
-        <nav>
-            <div class="links">
-                <a href="instructions.html">Instrucciones</a>
-                <a href="index.html" style="color: rgb(117, 109, 196);">Inicio</a>
-                <a href="links.html">Otros links</a>
-            </div>
-        </nav>
-    </header>
-    <div style="text-align: center;">
-        <h1 style="margin-bottom: 5px; "><p>Calculador de Medias - GREI edition</p></h1>
-        <span style="text-align:center; font-weight:700;">Tired of doing more math than in maths? Gotcha xd</span>
-        <h3><a style="color: lightgray" href="https://herta.morian.icu/">[Si soy masoquista buenos días]</a></h3>    
+    <div class="header">
+        <h1 style="text-align: center; margin-top: 0.75%">GREI Mark Calculator</h1>
     </div>
-    <div class="courses">
-        <h2>Asignaturas de primero de GREI</h2>
-        <a href="FMI.html" class="courses_text"><b>FMI.-</b> Fundamentos Matemáticos para la informática</a>
-        <a href="AM.html" class="courses_text"><b>AM.-</b> Análisis Matemático</a>
-        <a href="PROI.html" class="courses_text"><b>PROI.-</b> Programación I</a>
-        <a href="SD.html" class="courses_text"><b>SD.-</b> Sistemas Digitales</a>
-        <a href="TCL.html" class="courses_text"><b>TCL.-</b> Técnicas de Comunicación y Liderazgo</a>
-        <a href="AL.html" class="courses_text"><b>AL.-</b> Álgebra Lineal</a>
-        <a href="AEDI.html" class="courses_text"><b>AEDI.-</b> Algoritmos y Estructuras de Datos I</a>
-        <a href="ACI.html" class="courses_text"><b>ACI.-</b> Arquitectura de Computadoras I</a>
-        <a href="PROII.html" class="courses_text"><b>PROII.-</b> Programación II</a>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li style="margin-left: 5%;">GREI Mark Calculator <span>Calculadoras de notas</span></li>
+            <li> <button class="collapsible">Asignaturas primero</button>
+                <div class="contenido">
+                    <button class="linker" id="AM">AM</button>
+                    <button class="linker" id="FMI">FMI</button>
+                    <button class="linker" id="PROI">PROI</button>
+                    <button class="linker" id="SD">SD</button>
+                    <button class="linker" id="AEDI">AEDI</button>
+                    <button class="linker" id="PROII">PROII</button>
+                    <button class="linker" id="ACI">ACI</button>
+                    <button class="linker" id="AL">AL</button>
+                    <button class="linker" id="TCL">TCL</button>
+                </div>
+            </li>
+            <li> <button class="collapsible">Asignaturas segundo</button>
+                <div class="contenido">
+                    <button class="linker" id="AEDII">AEDII</button>
+                    <button class="linker" id="SOI">SOI</button>
+                    <button class="linker" id="ISI">ISI</button>
+                    <button class="linker" id="ACII">ACII</button>
+                    <button class="linker" id="EST">EST</button>
+                    <button class="linker" id="ISII">ISII</button>
+                    <button class="linker" id="SOII">SOII</button>
+                    <button class="linker" id="AP">AP</button>
+                    <button class="linker" id="RCI">RCI</button>
+                    <button class="linker" id="BDI">BDI</button>
+                </div>
+            </li>
+            <li> <button class="collapsible">Asignaturas tercero</button>
+                <div class="contenido">
+                    <button class="linker" id="LC">LC</button>
+                    <button class="linker" id="RCII">RCII</button>
+                    <button class="linker" id="BDII">BDII</button>
+                    <button class="linker" id="IU"></button>IU</button>
+                    <button class="linker" id="CD">CD</button>
+                    <button class="linker" id="DGP">DGP</button>
+                    <button class="linker" id="TALF">TALF</button>
+                    <button class="linker" id="CDI">CDI</button>
+                    <button class="linker" id="SI">SI</button>
+                    <button class="linker" id="HAE">HAE</button>
+                </div>
+            </li>
+            <li> <button class="collapsible">Asignaturas cuarto</button>
+                <div class="contenido">
+                    <button class="linker" id="SSI">SSI</button>
+                    <button class="linker" id="ABP">ABP</button>
+                    <button class="linker" id="SN">SN</button>
+                    <button class="linker" id="DIA">DIA</button>
+                    <button class="linker" id="DASS">DASS</button>
+                    <button class="linker" id="MAIS">MAIS</button>
+                    <button class="linker" id="TSW">TSW</button>
+                    <button class="linker" id="CCD">CCD</button>
+                    <button class="linker" id="DM">DM</button>
+                    <button class="linker" id="DAI">DAI</button>
+                    <button class="linker" id="PEI">PEI</button>
+                    <button class="linker" id="PEII">PEII</button>
+                    <button class="linker" id="FEJTIC">FEJTIC</button>
+                    <button class="linker" id="ALS">ALS</button>
+                    <button class="linker" id="DAA">DAA</button>
+                    <button class="linker" id="TAMI">TAMI</button>
+                    <button class="linker" id="TC">TC</button>
+                    <button class="linker" id="TFG">TFG</button>
+                </div>
+            </li>
+            <li><button class="linker" id="Inicio">Inicio</button></li>
+            <li><button class="linker" id="Instrucciones">Instrucciones</button></li>
+            <li><button class="linker" style="margin-bottom: 25%;" id="Otros">Otros links</button></li>
+        </ul>
     </div>
-    <div class="courses">
-        <h2>Asignaturas de segundo de GREI</h2>
-        <a href="EST.html" class="courses_text"><b>EST.-</b> Estadística</a>
-        <a href="AEDII.html" class="courses_text"><b>AEDII.-</b> Algoritmos y Estructuras de Datos II</a>
-        <a href="SOI.html" class="courses_text"><b>SOI.-</b> Sistemas Operativos I</a>
-        <a href="ISI.html" class="courses_text"><b>ISI.-</b> Ingeniería del Software I</a>
-        <a href="" class="courses_text"><b>ACII.-</b> Arquitectura de Computadoras II</a>
-        <a href="" class="courses_text"><b>SOII.-</b> Sistemas Operativos II</a>
-        <a href="" class="courses_text"><b>RCI.-</b> Redes de Computadores I</a>
-        <a href="" class="courses_text"><b>ISII.-</b> Ingeniería del Software II</a>
-        <a href="" class="courses_text"><b>BDI.-</b> Bases de Datos I</a>
-        <a href="" class="courses_text"><b>AP.-</b> Arquitecturas Paralelas</a>
+    <div id='center' class="main center">
+        <div class="mainInner" id="main">
+
+            <p>In progress, you can look around as much as you want</p>
+        </div>
+
     </div>
-    <div class="courses">
-        <h2>Asignaturas de tercero de GREI</h2>
-        <a href="" class="courses_text"><b>LC.-</b> Lógica para la Computación</a>
-        <a href="" class="courses_text"><b>RCII.-</b> Redes de Computadoras II</a>
-        <a href="" class="courses_text"><b>BDII.-</b> Bases de Datos II</a>
-        <a href="" class="courses_text"><b>IU.-</b> Interfaces de Usuario</a>
-        <a href="" class="courses_text"><b>CD.-</b> Centros de Datos</a>
-        <a href="" class="courses_text"><b>DGP.-</b> Dirección y Gestión de Proyectos</a>
-        <a href="" class="courses_text"><b>TALF.-</b> Teoría de Autómatas y Lenguajes Formales</a>
-        <a href="" class="courses_text"><b>CDI.-</b> Concurrencia y Distribución</a>
-        <a href="" class="courses_text"><b>SI.-</b> Sistemas Inteligentes</a>
-        <a href="" class="courses_text"><b>HAE.-</b> Hardware de Aplicación Específica</a>
-    </div>
-    <div class="courses">
-        <h2>Asignaturas de cuarto de GREI</h2>
-        <a href="" class="courses_text"><b>SSI.-</b> Seguridad en Sistemas Informáticos</a>
-        <a href="" class="courses_text"><b>ABP.-</b> Aprendizaje Basado en Proyectos</a>
-        <a href="" class="courses_text"><b>SN.-</b> Sistemas de Negocio</a>
-        <a href="" class="courses_text"><b>DIA.-</b> Desarrollo e Integración de Aplicaciones</a>
-        <a href="" class="courses_text"><b>DAGSS.-</b> Diseño de Arquitecturas de Grandes Sistemas de Software</a>
-        <a href="" class="courses_text"><b>MAIS.-</b> Métodos Avanzados de Ingeniería de Software</a>
-        <a href="" class="courses_text"><b>TSW.-</b> Tecnologías y Servicios Web</a>
-        <a href="" class="courses_text"><b>CCD.-</b> Creación de Contenidos Digitales</a>
-        <a href="" class="courses_text"><b>DM.-</b> Dispositivos Móviles</a>
-        <a href="" class="courses_text"><b>DAI.-</b> Desarrollo de Aplicaciones para Internet</a>
-        <a href="" class="courses_text"><b>PEI.-</b> Prácticas Externas: Prácticas en Empresas I</a>
-        <a href="" class="courses_text"><b>PEII.-</b> Prácticas Externas: Prácticas en Empresas II</a>
-        <a href="" class="courses_text"><b>FEJTIC.-</b> Fundamentos Éticos y Jurídicos de las TIC</a>
-        <a href="" class="courses_text"><b>ALS.-</b> Aplicaciones con Lenguajes de Script</a>
-        <a href="" class="courses_text"><b>DAA.-</b> Desarrollo Ágil de Aplicaciones</a>
-        <a href="" class="courses_text"><b>TAMI.-</b> Técnicas Avanzadas de Manejo de la Información</a>
-        <a href="" class="courses_text"><b>TC.-</b> Teoría de los Códigos</a>
-        <a href="" class="courses_text"><b>TFG.-</b> Trabajo de Fin de Grado</a>
-    </div>
-    <footer>
-        <p>Made by Akanenosketch [Insert funny text] </p>
-        <p style="font-size: small; font-weight:lighter">Si existe alguna duda o se cree que existe un error, revise la <a style="margin:auto" href="https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?centre=106&ensenyament=O06G151V01&consulta=assignatures&idioma=cast">Guía Docente</a> y abra un issue en GitHub/avise al desarrollador a cargo.</p>
-    </footer>
 </body>
+<script src="calculator.js"></script>
+
 </html>
